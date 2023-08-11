@@ -1,14 +1,15 @@
 #include <stdio.h>
 /**
- * main - Print the Alphabet.
+ * main - Print the letters.
  *
  * Return: Always 0 (Success)
  * */
-int main(void)
+int main() 
 {
-	char letter[26] ="abcdefghijklmnopqrstuvwxyz";
+	char letter;
+}
 
-	for (letter = 0; letter <= 26; letter++) {
+	for (letter = 'a'; letter <= 'z'; letter++) {
 		putchar(letter);
 	}
 	putchar("\n");
