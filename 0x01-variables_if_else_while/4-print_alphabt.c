@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*
- * main - Prints all al[habets in lowercase except q and e
+/**
+ * main - Prints all alphabets in lowercase except q and e
  * Return: Always 0 (Success)
  */
 int main(void)
