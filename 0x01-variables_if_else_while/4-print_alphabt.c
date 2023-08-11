@@ -1,12 +1,13 @@
 #include <stdio.h>
 /*
- * main - Prints all letters in lowecase except q and e
- * Return= Always (0) Success
+ * main - Prints all al[habets in lowercase except q and e
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	char alphabet;
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet++) 
+
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
 		if (alphabet != 'e' && alphabet != 'q')
 		{
