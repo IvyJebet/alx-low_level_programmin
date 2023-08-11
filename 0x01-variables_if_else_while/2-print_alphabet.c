@@ -7,10 +7,11 @@
  * */
 int main(void)
 {
-	char letter;
-	for (letter = 'a'; letter <= 'z'; letter++) {
-		putchar("%c", letter);
+	char alp[26] ="abcdefghijklmnopqrstuvwxyz";
+	int i;
+	for (i = 0; i <= 26; i++) {
+		putchar(alp[i]);
 	}
-	printf("\n");
+	putchar("\n");
 	return 0;
 }
