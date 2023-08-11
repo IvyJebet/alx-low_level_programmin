@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - Prints lowercase then in uppercase.
  *
  * Return: Always 0 (Successs)
