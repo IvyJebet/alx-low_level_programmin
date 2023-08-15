@@ -2,8 +2,8 @@
 /**
  * main - prints first 50 Fibonacci numbers, starting with 1 and 2
  * separated by comma then a space follows
- * 
- * return: Always 0.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
