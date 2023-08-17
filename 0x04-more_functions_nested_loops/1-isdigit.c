@@ -4,7 +4,7 @@
  * @c: Variable text
  * ends in a new line
  *
- * Return: Always 0
+ * Return: 1 if c is a digit, 0 otherwise
  */
 int _isdigit(int c)
 {
