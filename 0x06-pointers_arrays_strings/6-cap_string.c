@@ -1,13 +1,14 @@
  #include "main.h"
 /**
  * cap_string - Capitalizes all words of a string
- * str: String to be capitalized
+ * @str: String to be capitalized
  *
  * Return: Pointer to the changed String
  */
 char *cap_string(char *str)
 {       
         int index = 0;
+
         while (str[index])
         {       
                 while (!(str[index] >= 'a' && str[index] <= 'z'))
