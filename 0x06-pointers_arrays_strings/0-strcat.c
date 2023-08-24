@@ -3,22 +3,26 @@
  * _strcat - concatenates two strings
  * dest: The string to be appended upon
  * @src: The string to be appended to dest
- * @n: The number of bytes from src to be appended to dest
  *
  * Return: Void
  */
 char *_strcat(char *dest, char *src);
 {
-	char *i = dest;
+	int i;
+	int j;
 
-	while (*i)
+	i = 0;
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while (*src)
+	j = 0;
+	while (src[j] != '\0')
 	{
-		*i++ = *src++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	*i = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
