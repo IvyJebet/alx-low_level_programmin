@@ -29,6 +29,5 @@ char *create_array(unsigned int size, char c)
 	}
 	array[size] = '\0';
 	printf("\n");
-
 	return (array);
 }
