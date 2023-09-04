@@ -6,7 +6,7 @@
  * @size: Unsigned integer that represents size of array
  * @c: Character to initialize array  with
  *
- * Return: A pointer to the array
+ * Return: Always 0 (Success)
  * on error, returns null
  */
 char *create_array(unsigned int size, char c)
@@ -29,8 +29,6 @@ char *create_array(unsigned int size, char c)
 	}
 	array[size] = '\0';
 	printf("\n");
-
-	free(array);
 
 	return (array);
 }
