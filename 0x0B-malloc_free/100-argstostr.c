@@ -1,45 +1,41 @@
-#include <string.h>
 #include <stdlib.h>
 #include "main.h"
 
 /**
- * argstostr - Concatenates all the arguments of the program
- * @ac: Number of arguments parameter
- * @av: Array of strings representing the arguments Parameter
- *
- * Return: Always 0 (Success)
- * on error, returns NULL
+ * argstostr - main entry
+ * @ac: int input
+ * @av: double pointer array
+ * Return: 0
  */
 char *argstostr(int ac, char **av)
 {
-	char *concatenated_str;
-	int current_position = 0;
-	int total_length = 0;
-	int i;
+	int i, n, r = 0, l = 0;
+	char *str;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
+
 	for (i = 0; i < ac; i++)
 	{
-		total_length += strlen(av[i]) + 1;
+		for (n = 0; av[i][n]; n++)
+			l++;
 	}
-	concatenated_str = (char *)malloc(total_length);
-	if (concatenated_str == NULL)
-	{
+	l += ac;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
 		return (NULL);
-	}
 	for (i = 0; i < ac; i++)
 	{
-		strcpy(concatenated_str + current_position, av[i]);
-		current_position += strlen(av[i]);
-		if (i < ac - 1)
-		{
-		concatenated_str[current_position] = '\n';
-		current_position++;
-		}
+	for (n = 0; av[i][n]; n++)
+	{
+		str[r] = av[i][n];
+		r++;
 	}
-	concatenated_str[total_length - 1] = '\0';
-	return (concatenated_str);
+	if (str[r] == '\0')
+	{
+		str[r++] = '\n';
+	}
+	}
+	return (str);
 }
