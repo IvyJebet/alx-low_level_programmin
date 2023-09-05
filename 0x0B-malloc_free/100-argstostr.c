@@ -30,7 +30,9 @@ char *argstostr(int ac, char **av)
 	{
 		total_length -= 1;
 	}
-	concatenated_str = (char *)malloc(total_length + 1);
+	total_length++;
+	concatenated_str = (char *)malloc(total_length);
+
 	if (concatenated_str == NULL)
 	{
 		return (NULL);
@@ -45,6 +47,6 @@ char *argstostr(int ac, char **av)
 		current_position++;
 		}
 	}
-	concatenated_str[total_length] = '\0';
+	concatenated_str[total_length - 1] = '\0';
 	return (concatenated_str);
 }
